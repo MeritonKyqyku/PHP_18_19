@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sh.M.U."Adem Jashari"
+        </title>
+        <link rel="stylesheet" href="formatizimi.css">
+
+    </head>
+    <body>
+           <div class="radio1"><br>
+
+            <h1>Sh.m.u. "Adem Jashari"</h1><div id="ora" style="color:grey;margin-left: 15%"></div><h3 class="veq">Jemi te paret dhe me te miret</h3>
+       <div class="tre"><h2 id="HOMEPAGE"><a href="kryefaqja.html">Kryefaqja</a></h2>
+            <h2 id="Historiku"><a href="historiku.html">Historiku</a></h2>
+            <div class="dropdown">
+                <button class="dropbtn"><h2>Stafi</h2></button>
+            <div class="dropdown-content">
+            <a href="mesuesit.html">Mesuesit</a>
+            </div>
+            <a href="administrata.html">Administrata</a>
+            </div>
+            <h2 id="Foto"><a href="foto.html">Foto</a></h2>
+       </div>
+           </div>
+        <div class="topi">
+                <p class="marginat"><img class="imazhi2" src="Marjan Dema.png" alt="Marjan Dema" height="100" width="100" hspace="10" vspace="10">
+                        <br>
+                        <?php include 'Stafi.php';
+                            class Administrata extends Stafi {
+                              public $sherbimi;
+
+                            	public function __construct($emri, $mosha,$shkolla,$sherbimi) {
+                            		$this -> emri = $emri;
+                            		$this -> mosha = $mosha;
+                                $this -> shkolla = $shkolla;
+                                $this -> sherbimi =$sherbimi;
+
+                              }
+                            	public function echoData() {
+                            		echo "<br>{$this -> titulli}{$this -> emri} eshte {$this -> mosha} vjeqar<br>";
+                                echo "Ka titullin{$this -> shkolla} Kryen funksionin {$this-> sherbimi}";
+                            	}
+
+                            }
+                            ?>
+
+
+                        Rektori i Universiteti te Prishtines <br>
+                        Prof. Dr. Marjan Dema
+                        Curriculum Vitae
+                        Tel.:+381 38 244 183
+                        Mail: marjan.dema@uni-pr.edu
+                        <?php
+                        $Marian_Dema = new Administrata("Marian Dema", "62","Magjister i shkencave matematikore","Rektor i UP");
+                        $Marian_Dema -> setTitulli("Prof.Dr.");
+                        $Marian_Dema -> echoData(); ?>
+                        <br><br><br><br>
+                    </p>
+                    <p class="marginat"><img class="imazhi2" src="lb2016.jpeg" alt="Lirim Bylygbashi" height="100" width="100" hspace="10" vspace="10">
+                        <br>
+                        Zyrtar i Teknologjis&euml s&euml Informacionit<br>
+
+                        Information and Communication Technology
+                        lirim.bylygbashi@uni-pr.edu
+                        +381 (0)38 554 896 ext.102
+                        <?php
+                        $Lirim_Bylygbashi = new Administrata("Lirim Bylygbashi", "30","Zyrtar i Teknologjisë së Informacionit","Mbikqyrjen e Sems PER FIEK");
+                        $Lirim_Bylygbashi -> setTitulli("Ass");
+                        $Lirim_Bylygbashi -> echoData(); ?>
+                        <br><br><br><br>
+                    </p>
+                    <p class="marginat"><img class="imazhi2" src="Foto_Web_480x640_BR.jpg" alt="Blerim Rexha" height="100" width="100" hspace="10" vspace="10">
+                        <br>
+                      Shef i departamentit t&euml Kompjuterik&eumls<br>
+                      FIEK
+                      blerim.rexha@uni-pr.edu
+                      +381 38 554 896
+
+
+                      M&eumlsimdh&eumln&eumls n&euml l&eumlnd&eumlt niveli Bachelor
+
+                      Rrjetet kompjuterike
+                      Praktika e rrjeteve kompjuterike
+                      Inxhinieria softuerike
+
+                      M&eumlsimdh&eumln&eumls n&euml l&eumlnd&eumlt niveli Master
+
+                      Siguria e t&euml dh&eumlnave
+                      Procesimi paralel
+                      Siguria e rrjeteve kompjuterike
+                      <?php
+                      $Blerim_Rexha = new Administrata("Blerim Rexha", "49","Doktor i Inxhinieris kompjuterike","Menaxhimin e Drejtimit te Kompjuterikes");
+                      $Blerim_Rexha-> setTitulli("Prof.Dr.");
+                      $Blerim_Rexha -> echoData(); ?>
+                      <br><br>
+
+                    </p>
+            </div>
+
+
+
+             <div class="fundi"><p><a href="#">Rikthehuni ne fillim</a></p></div><br><br>
+         <form style="float:left; margin: 1% 3% 3% 3%;">
+            <table>
+                <tr>
+                    <td>
+                        <label style="color: white">Emri:</label>
+                        <br>
+                        <input type ="text" name="emri" size="20"/>
+                    </td>
+
+                    <td>
+                        <label style="color:white"> E-mail:</label>
+                        <br>
+                        <input type ="email" name ="email" size="19"/>
+                    </td>
+                 </tr>
+            </table>
+
+            <br>
+            <label style="color: white">Mesazhi:</label>
+            <br>
+            <textarea name="description" rows="4" cols="39"></textarea>
+            <br><br>
+            <input type ="submit" value="Submit"/>
+            <input type="Submit" value="Reset"/>
+            </form>
+
+        <div class="dubai">
+            <h3 class="perdore">Aktivitetet</h3><hr>
+            <h4><a href="Blogu1.html">Pastrimi i ambientit</a></h4>
+            <h4><a href="Blogu2.html">Recitali</a></h4>
+            <h4><a href="Blogu3.html">Veprimtari bamirsie</a></h4>
+            <h4><a href="Blogu4.html">Koncerti i 28 nentorit</a></h4>
+        </div>
+
+        <div class="kairo">
+            <h3 class="perdore">Kontakti</h3><hr>
+            <h4><img src="fb.png" alt="fb"/><a href="https://www.facebook.com/" target="blank"><big>Facebook</big></a></h4>
+            <h4><img src="flickr.png" alt="tw"/><a href="https://twitter.com/" target="blank"><big>Twitter</big></a></h4>
+            <h4><img src="twitter.png" alt="in"/><a href="https://www.flickr.com/" target="blank"><big>Flickr</big></a></h4>
+        </div><br><br>
+
+        <div class="jeta" style="color:gray;display: inline-block;" >
+           <em> Te gjitha te drejtat e rezervuara</em>
+    </body>
+</html>
